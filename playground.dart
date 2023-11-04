@@ -17,6 +17,24 @@ class SomeNumber {
   int num = 10;
 }
 
+/// Enumerations
+enum AnimalType {
+  dog, bunny, fish;
+}
+
+void iLoveAnimal(AnimalType animal) {
+  switch (animal) {
+    case AnimalType.dog:
+      print("I love ${animal.name}");
+      break;
+    case AnimalType.bunny:
+      print("${animal.name} is cute.");
+      break;
+    case AnimalType.fish:
+      print("${animal.name} is an interesting animal");
+      break; 
+  }
+}
 void main() {
   //Type inference
   var firstName = "Kushagra";
@@ -171,6 +189,8 @@ This is the way to do it.''';
   var person2 = Person.guest("Someone");
   person2.showOutput();
   print(Person.gender);
+
+  iLoveAnimal(AnimalType.dog);
 }
 
  /// Functions
